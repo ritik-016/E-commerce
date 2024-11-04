@@ -16,7 +16,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
 }
 nav{
     flex: 1;
@@ -29,6 +29,9 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+}
+.navbar img{
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -49,7 +52,7 @@ p{
 }
 .col-2 img{
     max-width: 100%;
-    padding: 50px 0;
+    padding: 43px 0;
 }
 .col-2 h1{
     font-size: 50px;
@@ -247,6 +250,7 @@ ul li{
 .menu-icon{
     width: 28px;
     margin-left: 20px;
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -347,8 +351,124 @@ input:focus{
     cursor: pointer;
 }
 
+/* cart items  */
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 380px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
 
+/* account page */
+.account-page{
+    padding: 40pxpx 0;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#loginform{
+    left: -300px;
+}
+#regform{
+    left: 0;
+}
+#indicator{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
 
 
 
@@ -368,5 +488,8 @@ input:focus{
      .single-product h1{
         font-size: 26px;
         line-height: 32px;
+     }
+     .cart-info p{
+        display: none;
      }
 }
